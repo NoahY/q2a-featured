@@ -8,7 +8,7 @@
 			
 			$featured = qa_opt('featured_questions_list');
 			
-			if($featured && isset($this->content['q_list'])) {
+			if($featured && (!$this->request || $this->request=='questions') && !qa_get('sort') && isset($this->content['q_list'])) {
 				$featured = explode(',',$featured);
 				foreach($this->content['q_list']['qs'] as $idx => $question) {
 					if(in_array($question['raw']['postid'],$featured)) {
