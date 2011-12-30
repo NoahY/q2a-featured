@@ -18,7 +18,7 @@
 				foreach($featured as $id) {
 					$userid = qa_get_logged_in_userid();
 
-					$selectspec=qa_db_posts_basic_selectspec($userid);
+					$selectspec=qa_db_posts_basic_selectspec($userid,true);
 					$selectspec['source'].=" JOIN (SELECT postid FROM ^posts WHERE postid=$) y ON ^posts.postid=y.postid";
 					$selectspec['arguments'][] = $id;
 					
@@ -27,6 +27,7 @@
 					$options=qa_post_html_defaults('Q');
 
 					$q_item = qa_any_to_q_html_fields($question[$id], $userid, qa_cookie_get(), $usershtml, null, $options);
+					
 					array_unshift($this->content['q_list']['qs'],$q_item);
 				}
 				$this->featured_questions = count($featured);

@@ -18,8 +18,8 @@
                     exit;   
     }               
 
-    qa_register_plugin_module('module', 'qa-admin.php', 'qa_featured_admin', 'Featured Questions');
-    qa_register_plugin_layer('qa-layer.php', 'Featured Layer');
+    qa_register_plugin_module('module', 'qa-featured-admin.php', 'qa_featured_admin', 'Featured Questions');
+    qa_register_plugin_layer('qa-featured-layer.php', 'Featured Layer');
     
 /*                              
     Omit PHP closing tag to help avoid accidental output
