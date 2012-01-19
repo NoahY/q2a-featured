@@ -39,11 +39,12 @@
 	// theme replacement functions
 
 		function q_list($q_list) {
-			foreach ($q_list['qs'] as $idx => $q_item)
-				if($idx < $this->featured_questions)
-					$q_list['qs'][$idx]['classes'] = @$q_list['qs'][$idx]['classes'].' qa-q-list-item-featured';
-				else
-					break;
+			if(isset($q_list['qs']))
+				foreach ($q_list['qs'] as $idx => $q_item)
+					if($idx < $this->featured_questions)
+						$q_list['qs'][$idx]['classes'] = @$q_list['qs'][$idx]['classes'].' qa-q-list-item-featured';
+					else
+						break;
 			qa_html_theme_base::q_list($q_list);
 		}
 		function head_custom() {
