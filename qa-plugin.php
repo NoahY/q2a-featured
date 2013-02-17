@@ -3,7 +3,7 @@
 /*              
     Plugin Name: Featured Questions
     Plugin URI: https://github.com/NoahY/q2a-featured
-    Plugin Update Check URI: https://github.com/NoahY/q2a-featured/raw/master/qa-plugin.php
+    Plugin Update Check URI: https://raw.github.com/NoahY/q2a-featured/master/qa-plugin.php
     Plugin Description: Keep featured questions at top of list
     Plugin Version: 1
     Plugin Date: 2011-12-28
